@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 :root {
     --red: #d01c28;
@@ -23,12 +23,15 @@ a {
     text-decoration: none;
 }
 
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1280px;
-    margin: 0 auto;
     height: 72px;
 }
 
@@ -40,9 +43,15 @@ nav > ul {
 nav > ul > li > a {
     color: var(--gray);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
+    transition: all 0.3s linear;
 }
-.btn-login {
+
+nav > ul > li > a:hover {
+    color: #d01c28;
+}
+
+.btn {
     padding: 6px 16px;
     background: var(--red);
     height: 32px;
@@ -51,4 +60,64 @@ nav > ul > li > a {
     justify-content: center;
     color: #fff;
     font-weight: 500;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: all 0.3s linear;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #d01c28;
+    border-color: #d01c28;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 72px);
+}
+
+.hero__heading {
+    color: #000;
+    font-size: 108px;
+    font-weight: 800;
+    line-height: 94.444%;
+}
+
+.hero__desc {
+    margin-top: 36px;
+    width: 404px;
+    color: var(--GRAY, #5a5959);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 36px;
+}
+
+.btn__link {
+    color: var(--GRAY, #5a5959);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.shopping {
+    margin-top: 36px;
+}
+
+.shopping__desc {
+    color: var(--GRAY, #5a5959);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.brand-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
 }
